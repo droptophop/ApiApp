@@ -4,14 +4,14 @@
     "/home/hop/revature/ApiApp/ApiApp.Testing/ApiApp.Testing.csproj": {}
   },
   "projects": {
-    "/home/hop/revature/ApiApp/ApiApp.Testing/ApiApp.Testing.csproj": {
+    "/home/hop/revature/ApiApp/ApiApp.Client/ApiApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/hop/revature/ApiApp/ApiApp.Testing/ApiApp.Testing.csproj",
-        "projectName": "ApiApp.Testing",
-        "projectPath": "/home/hop/revature/ApiApp/ApiApp.Testing/ApiApp.Testing.csproj",
+        "projectUniqueName": "/home/hop/revature/ApiApp/ApiApp.Client/ApiApp.csproj",
+        "projectName": "ApiApp",
+        "projectPath": "/home/hop/revature/ApiApp/ApiApp.Client/ApiApp.csproj",
         "packagesPath": "/home/hop/.nuget/packages/",
-        "outputPath": "/home/hop/revature/ApiApp/ApiApp.Testing/obj/",
+        "outputPath": "/home/hop/revature/ApiApp/ApiApp.Client/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/hop/.nuget/NuGet/NuGet.Config"
@@ -35,7 +35,68 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/hop/revature/ApiApp/ApiApp.Testing/ApiApp.Testing.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/hop/revature/ApiApp/ApiApp.Testing/ApiApp.Testing.csproj",
+        "projectName": "ApiApp.Testing",
+        "projectPath": "/home/hop/revature/ApiApp/ApiApp.Testing/ApiApp.Testing.csproj",
+        "packagesPath": "/home/hop/.nuget/packages/",
+        "outputPath": "/home/hop/revature/ApiApp/ApiApp.Testing/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/hop/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/hop/revature/ApiApp/ApiApp.Client/ApiApp.csproj": {
+                "projectPath": "/home/hop/revature/ApiApp/ApiApp.Client/ApiApp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.5.0, )"

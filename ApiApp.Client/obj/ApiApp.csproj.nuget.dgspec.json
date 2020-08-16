@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/hop/revature/ApiApp/ApiApp/ApiApp.csproj": {}
+    "/home/hop/revature/ApiApp/ApiApp.Client/ApiApp.csproj": {}
   },
   "projects": {
-    "/home/hop/revature/ApiApp/ApiApp/ApiApp.csproj": {
+    "/home/hop/revature/ApiApp/ApiApp.Client/ApiApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/hop/revature/ApiApp/ApiApp/ApiApp.csproj",
+        "projectUniqueName": "/home/hop/revature/ApiApp/ApiApp.Client/ApiApp.csproj",
         "projectName": "ApiApp",
-        "projectPath": "/home/hop/revature/ApiApp/ApiApp/ApiApp.csproj",
+        "projectPath": "/home/hop/revature/ApiApp/ApiApp.Client/ApiApp.csproj",
         "packagesPath": "/home/hop/.nuget/packages/",
-        "outputPath": "/home/hop/revature/ApiApp/ApiApp/obj/",
+        "outputPath": "/home/hop/revature/ApiApp/ApiApp.Client/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/hop/.nuget/NuGet/NuGet.Config"
