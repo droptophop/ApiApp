@@ -19,6 +19,10 @@ steps:
     command: test
     projects: '**/*.Testing.csproj'
     arguments: '--configuration $(buildConfiguration)'
+    
+- run: | # multiline value with each line ending with a newline character \n
+    dotnet build
+    dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
