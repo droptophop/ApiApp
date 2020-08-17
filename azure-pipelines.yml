@@ -19,8 +19,6 @@ steps:
     command: test
     projects: '**/*.Testing.csproj'
     arguments: '--configuration $(buildConfiguration)'
-    run: dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover # unit testing
-
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
