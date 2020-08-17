@@ -39,7 +39,7 @@ jobs:
       - run: docker image push hdhopson/apiapp
       - run: docker logout
 
-  deploy:
+  # deploy:
 
 name: cibuild
 
