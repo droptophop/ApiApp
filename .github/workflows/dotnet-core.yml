@@ -1,25 +1,46 @@
-name: .NET Core
-
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-
+    runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.301
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      - uses: actions/checkout@v2.3.1
+      - run: dotnet build # compile
+  
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.3.1
+      - run: dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover # unit testing
+
+  analyze:
+    needs: [build, test]
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.3.1
+      - run: git fetch --unshallow
+      - run: dotnet tool install --global dotnet-sonarscanner
+      # - run: | # multiline value with each line ending with a newline character \n
+          # dotnet sonarscanner begin -o:'{ configure owner }' -k:'{ configure key }' -d:sonar.login='{ configure login cred }' -d:sonar.host.url='https://sonarcloud.io/'
+          # dotnet build
+          # dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
+          # dotnet sonarscanner end -d:sonar.login='{ configure login cred }'
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # package:
+  #   env:
+  #     DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+  #     DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+  #   needs: [analyze]
+  #   runs-on: ubuntu-20.04
+    # steps:
+      # - uses: actions/checkout@v2.3.1
+      # - run: docker login --username ${DOCKER_LOGIN} --password ${DOCKER_TOKEN}
+      # - run: docker image build -f dockerfile -t { configure tag } .
+      # - run: docker image tag { configure tag and registry }
+      # - run: docker image push { configure registry }
+      # - run: docker logout
+
+  # deploy:
+
+name: cibuild
+
+on: push
