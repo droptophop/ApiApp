@@ -16,7 +16,9 @@ steps:
 
 - task: DotNetCoreCLI@2
   inputs:
-    command: dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
+    command: |
+      dotnet build
+      dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
     projects: '**/*.Testing.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
