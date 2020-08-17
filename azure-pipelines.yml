@@ -19,13 +19,8 @@ steps:
     command: test
     projects: '**/*.Testing.csproj'
     arguments: '--configuration $(buildConfiguration)'
+    run: dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover # unit testing
 
-# Publish code coverage results
-# Publish Cobertura or JaCoCo code coverage results from a build
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: cobertura
-    summaryFileLocation: '--configuration $(buildConfiguration)'
 
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
