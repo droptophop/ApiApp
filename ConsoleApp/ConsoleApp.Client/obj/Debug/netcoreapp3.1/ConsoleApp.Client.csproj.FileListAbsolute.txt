@@ -1,0 +1,17 @@
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/obj/Debug/netcoreapp3.1/ConsoleApp.Client.csprojAssemblyReference.cache
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/obj/Debug/netcoreapp3.1/ConsoleApp.Client.AssemblyInfoInputs.cache
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/obj/Debug/netcoreapp3.1/ConsoleApp.Client.AssemblyInfo.cs
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/obj/Debug/netcoreapp3.1/ConsoleApp.Client.csproj.CoreCompileInputs.cache
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/bin/Debug/netcoreapp3.1/ConsoleApp.Client
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/bin/Debug/netcoreapp3.1/ConsoleApp.Client.deps.json
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/bin/Debug/netcoreapp3.1/ConsoleApp.Client.runtimeconfig.json
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/bin/Debug/netcoreapp3.1/ConsoleApp.Client.runtimeconfig.dev.json
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/bin/Debug/netcoreapp3.1/ConsoleApp.Client.dll
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/bin/Debug/netcoreapp3.1/ConsoleApp.Client.pdb
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/bin/Debug/netcoreapp3.1/System.Net.Http.Formatting.dll
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/obj/Debug/netcoreapp3.1/ConsoleApp.Client.csproj.CopyComplete
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/obj/Debug/netcoreapp3.1/ConsoleApp.Client.dll
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/obj/Debug/netcoreapp3.1/ConsoleApp.Client.pdb
+/home/hop/revature/ApiApp/ConsoleApp/ConsoleApp.Client/obj/Debug/netcoreapp3.1/ConsoleApp.Client.genruntimeconfig.cache
