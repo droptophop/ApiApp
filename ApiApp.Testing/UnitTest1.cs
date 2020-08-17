@@ -12,7 +12,7 @@ namespace ApiApp.Testing
         WeatherForecastController wfc = new WeatherForecastController(_logger);
         
         [Fact]
-        public void Test1()
+        public void GetWeatherForecasts()
         {
             var forecast = wfc.Get();
 
