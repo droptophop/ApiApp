@@ -25,21 +25,21 @@ jobs:
           dotnet sonarscanner end -d:sonar.login='f0b883386031a63a0f443a4194e5ed215482d624'
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  # package:
-  #   env:
-  #     DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
-  #     DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
-  #   needs: [analyze]
-  #   runs-on: ubuntu-20.04
-    # steps:
-      # - uses: actions/checkout@v2.3.1
-      # - run: docker login --username ${DOCKER_LOGIN} --password ${DOCKER_TOKEN}
-      # - run: docker image build -f dockerfile -t { configure tag } .
-      # - run: docker image tag { configure tag and registry }
-      # - run: docker image push { configure registry }
-      # - run: docker logout
+  package:
+    env:
+      DOCKER_LOGIN: ${{ secrets.DOCKER_LOGIN }}
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+    needs: [analyze]
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.3.1
+      - run: docker login --username ${DOCKER_LOGIN} --password ${DOCKER_TOKEN}
+      - run: docker image build -f dockerfile -t apiapp .
+      - run: docker image tag apiapp hdhopson/apiapp
+      - run: docker image push hdhopson/apiapp
+      - run: docker logout
 
-  # deploy:
+  deploy:
 
 name: cibuild
 
