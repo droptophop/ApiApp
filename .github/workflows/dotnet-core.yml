@@ -43,7 +43,7 @@ jobs:
 
 name: cibuild
 
-on: 
+on: |
   push
   pull_request:
     branches:
