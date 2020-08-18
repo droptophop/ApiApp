@@ -44,7 +44,6 @@ jobs:
 name: cibuild
 
 on:
-  push:
-    branches: [ * ]
+  push
   pull_request:
     branches: [ master ]
