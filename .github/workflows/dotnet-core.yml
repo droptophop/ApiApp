@@ -43,6 +43,7 @@ jobs:
 
 name: cibuild
 
-on: |
+on:
   push
+on:
   pull_request
