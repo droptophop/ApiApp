@@ -1,10 +1,19 @@
-FROM mcr.microsoft.com/dotnet/core/sdk as publish
-WORKDIR /app
-# from the path on the physical machine to the image environment
-COPY . .
-RUN dotnet publish -c Release -o out ApiApp.Client/ApiApp.csproj
+# get base sdk image from Microsoft
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as publish
 
-FROM mcr.microsoft.com/dotnet/core/aspnet
-WORKDIR /dist
-COPY --from=publish /app/out /dist
-CMD [ "dotnet", "ApiApp.Client.dll" ]
+# create working directory
+WORKDIR /app
+
+# copy the csproj file and restore any dependecies (via NuGet)
+COPY . .
+RUN dotnet restore ApiApp.Client/ApiApp.csproj
+
+# build the release
+COPY . .
+RUN dotnet publish -c Release -o out
+
+# generate runtime image
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+WORKDIR /app
+COPY --from=publish /app/out .
+ENTRYPOINT ["dotnet", "ApiApp.dll"]
